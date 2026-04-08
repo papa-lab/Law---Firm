@@ -126,12 +126,9 @@ const FAQ = () => {
         {/* Contact CTA */}
         <div className="text-center mt-12">
           <p className="text-navy/60 mb-4">Still have questions?</p>
-          <a
-            href="tel:+254722840238"
-            className="inline-flex items-center gap-2 bg-gold text-navy px-6 py-3 font-semibold text-sm tracking-wider uppercase hover:bg-[#B8941F] transition-colors"
-          >
-            Call Us: 0722 840 238
-          </a>
+          <p className="inline-flex items-center gap-2 bg-gold text-navy px-6 py-3 font-semibold text-sm tracking-wider uppercase">
+            Ask our AI Assistant
+          </p>
         </div>
       </div>
     </section>

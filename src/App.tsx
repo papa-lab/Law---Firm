@@ -14,7 +14,7 @@ import Insights from './sections/Insights';
 import FAQ from './sections/FAQ';
 import Booking from './sections/Booking';
 import Footer from './sections/Footer';
-import WhatsAppButton from './components/WhatsAppButton';
+import AIAssistant from './components/AIAssistant';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -53,8 +53,8 @@ function App() {
         <Footer />
       </main>
       
-      {/* WhatsApp floating button */}
-      <WhatsAppButton />
+      {/* AI assistant */}
+      <AIAssistant />
     </div>
   );
 }

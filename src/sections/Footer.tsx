@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
+import { Bot, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -156,14 +156,9 @@ const Footer = () => {
           <div>
             <h4 className="label-uppercase text-gold mb-6">Contact</h4>
             <ul className="space-y-4">
-              <li>
-                <a
-                  href="tel:+254722840238"
-                  className="flex items-center gap-3 text-sm text-ivory/70 hover:text-gold transition-colors"
-                >
-                  <Phone className="w-4 h-4 text-gold" />
-                  +254 722 840 238
-                </a>
+              <li className="flex items-center gap-3 text-sm text-ivory/70">
+                <Bot className="w-4 h-4 text-gold" />
+                AI Assistant available on this page
               </li>
               <li>
                 <a
