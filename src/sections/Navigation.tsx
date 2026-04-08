@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,7 +39,6 @@ const Navigation = () => {
         }`}
       >
         <div className="px-6 sm:px-8 lg:px-[7vw] flex items-center justify-between">
-          {/* Logo */}
           <a
             href="#"
             onClick={(e) => {
@@ -51,7 +50,6 @@ const Navigation = () => {
             Samson Bosire Mbeche <span className="text-gold">&</span> Associates
           </a>
 
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
               <button
@@ -65,15 +63,10 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
-            <a
-              href="tel:+254722840238"
-              className="flex items-center gap-2 text-sm font-medium text-navy/80 hover:text-navy transition-colors"
-            >
-              <Phone className="w-4 h-4" />
-              <span>0722 840 238</span>
-            </a>
+            <span className="text-xs font-semibold tracking-wider uppercase text-gold border border-gold/50 px-3 py-2">
+              AI Assistant Available
+            </span>
             <button
               onClick={() => scrollToSection('#booking')}
               className="bg-gold text-navy px-6 py-3 text-xs font-semibold tracking-wider uppercase hover:bg-[#B8941F] transition-colors"
@@ -82,7 +75,6 @@ const Navigation = () => {
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="lg:hidden p-2 text-navy"
@@ -93,7 +85,6 @@ const Navigation = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
       <div
         className={`fixed inset-0 z-40 bg-ivory transition-transform duration-500 lg:hidden ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
@@ -115,13 +106,7 @@ const Navigation = () => {
           >
             Book Consultation
           </button>
-          <a
-            href="tel:+254722840238"
-            className="flex items-center gap-2 text-navy/80"
-          >
-            <Phone className="w-5 h-5" />
-            <span>0722 840 238</span>
-          </a>
+          <span className="text-xs tracking-wider uppercase text-gold">AI Assistant Available</span>
         </div>
       </div>
     </>

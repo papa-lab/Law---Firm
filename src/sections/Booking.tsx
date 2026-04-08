@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Phone, Clock, MapPin, Mail, Calendar, CheckCircle, Send } from 'lucide-react';
+import { Bot, Clock, MapPin, Mail, Calendar, CheckCircle, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -23,7 +23,6 @@ const Booking = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
     matterType: '',
     preferredDate: '',
     message: '',
@@ -77,7 +76,6 @@ const Booking = () => {
     const body = encodeURIComponent(
       `Name: ${formData.name}\n` +
       `Email: ${formData.email}\n` +
-      `Phone: ${formData.phone}\n` +
       `Matter Type: ${formData.matterType}\n` +
       `Preferred Date: ${formData.preferredDate || 'Not specified'}\n\n` +
       `Message:\n${formData.message || 'No additional message'}`
@@ -94,7 +92,6 @@ const Booking = () => {
       setFormData({
         name: '',
         email: '',
-        phone: '',
         matterType: '',
         preferredDate: '',
         message: '',
@@ -103,7 +100,7 @@ const Booking = () => {
   };
 
   const contactInfo = [
-    { icon: Phone, label: 'Phone', value: '+254 722 840 238', href: 'tel:+254722840238' },
+    { icon: Bot, label: 'AI Assistant', value: 'Available on this website for instant answers' },
     { icon: Mail, label: 'Email', value: 'mbechesam@yahoo.com', href: 'mailto:mbechesam@yahoo.com' },
     { icon: Clock, label: 'Office Hours', value: 'Mon–Fri: 9:00 AM – 5:00 PM' },
     { icon: MapPin, label: 'Location', value: 'Nairobi, Kenya' },
@@ -224,19 +221,6 @@ const Booking = () => {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm text-navy/70 mb-2">
-                      Phone Number *
-                    </label>
-                    <Input
-                      type="tel"
-                      required
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="border-navy/20 focus:border-gold focus:ring-gold/20"
-                      placeholder="+254 7XX XXX XXX"
-                    />
-                  </div>
                   <div>
                     <label className="block text-sm text-navy/70 mb-2">
                       Matter Type *
