@@ -66,14 +66,7 @@ const Navigation = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center gap-4">
-            <a
-              href="tel:+254722840238"
-              className="flex items-center gap-2 text-sm font-medium text-navy/80 hover:text-navy transition-colors"
-            >
-              <Phone className="w-4 h-4" />
-              <span>0722 840 238</span>
-            </a>
+          <div className="hidden lg:flex items-center">
             <button
               onClick={() => scrollToSection('#booking')}
               className="bg-gold text-navy px-6 py-3 text-xs font-semibold tracking-wider uppercase hover:bg-[#B8941F] transition-colors"
